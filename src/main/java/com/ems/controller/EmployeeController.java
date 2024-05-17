@@ -25,14 +25,14 @@ import com.ems.service.EmployeeService;
 @RequestMapping("/employees")
 public class EmployeeController {
 	
-	@Autowired
+    @Autowired
     private EmployeeService employeeService;
 	
-	@PostMapping
+    @PostMapping
     public Employee createEmployee(@RequestBody Employee employee) {
         return employeeService.createEmployee(employee);
     }
-	@PutMapping("/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<Employee> updateEmployee(@PathVariable Long id, @RequestBody Employee updatedEmployee) {
         try {
             Employee updated = employeeService.updateEmployee(id, updatedEmployee);
