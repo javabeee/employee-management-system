@@ -25,7 +25,7 @@ import com.ems.service.DepartmentService;
 @RequestMapping("/departments")
 public class DepartmentController {
 	
-	@Autowired
+    @Autowired
     private DepartmentService departmentService;
 
     @PostMapping
